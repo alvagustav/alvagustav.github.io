@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcadia PlayStation</title>
+    <link rel="stylesheet" href="css/style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+    <div class="container">
+        <a href="index.html" class="logo-link">
+            <img src="logo 2.png" alt="Arcadia PlayStation Logo" class="logo-img">
+            <h1 class="site-title">Arcadia PlayStation</h1> </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="konsol.html">Konsol</a></li>
+                <li><a href="permainan.html">Permainan</a></li>
+                <li><a href="vr.html">VR & Aksesoris</a></li>
+                <li class="cart-icon-nav"><a href="index.html#cart"><i class="fas fa-shopping-cart"></i> (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <h2>Sewa PlayStation Terbaik untuk Pengalaman Gaming Tak Terlupakan!</h2>
+                <p>Temukan konsol, game terbaru, dan aksesoris VR untuk petualangan gaming Anda.</p>
+                <button id="exploreBtn" class="btn primary-btn">Mulai Jelajahi</button>
+            </div>
+        </section>
+
+        <section id="consoles" class="product-section">
+            <div class="container">
+                <h2>🎮 Koleksi Konsol</h2>
+                <div class="product-grid" id="console-list">
+                    </div>
+            </div>
+        </section>
+
+        <section id="games" class="product-section bg-light">
+            <div class="container">
+                <h2>🕹️ Permainan Terbaik</h2>
+                <div class="product-grid" id="game-list">
+                    </div>
+            </div>
+        </section>
+
+        <section id="vr-gear" class="product-section">
+            <div class="container">
+                <h2>🥽 Perangkat VR & Aksesoris</h2>
+                <div class="product-grid" id="vr-accessories-list">
+                    </div>
+            </div>
+        </section>
+
+        <section id="cart" class="cart-section bg-light">
+            <div class="container">
+                <h2>🛒 Keranjang Belanja Anda</h2>
+                <div id="cart-items">
+                    <p id="empty-cart-message">Keranjang Anda kosong.</p>
+                </div>
+                <div class="cart-summary">
+                    <h3>Total: <span id="cart-total">Rp 0</span></h3>
+                    <button id="checkout-btn" class="btn primary-btn" disabled>Lanjutkan ke Checkout</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="checkout" class="checkout-section">
+            <div class="container">
+                <h2>💸 Proses Checkout</h2>
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telepon">Nomor Telepon:</label>
+                        <input type="tel" id="telepon" name="telepon" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Alamat Pengiriman:</label>
+                        <textarea id="alamat" name="alamat" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date">Tanggal Mulai Sewa:</label>
+                        <input type="date" id="start-date" name="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end-date">Tanggal Selesai Sewa:</label>
+                        <input type="date" id="end-date" name="endDate" required>
+                    </div>
+                    <button type="submit" class="btn primary-btn">Konfirmasi Pesanan</button>
+                    <button type="button" id="back-to-cart-btn" class="btn secondary-btn">Kembali ke Keranjang</button>
+                </form>
+                <div id="checkout-confirmation" style="display: none;">
+                    <h3>Terima Kasih, Pesanan Anda Telah Dikonfirmasi! 🎉</h3>
+                    <p>Detail pesanan akan dikirimkan ke email Anda.</p>
+                    <button id="continue-shopping-btn" class="btn primary-btn">Lanjutkan Belanja</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section bg-light">
+            <div class="container">
+                <h2>📞 Hubungi Kami</h2>
+                <p>Ada pertanyaan? Jangan ragu untuk menghubungi kami!</p>
+                <p><i class="fas fa-envelope"></i> Email: info@Arcadiaplaystation.com</p>
+                <p><i class="fas fa-phone"></i> Telepon: +62 851-7963-2935</p>
+                <div class="social-links">
+                    <a href="https://web.facebook.com/people/Arcadia-Rent/pfbid02fEtW1tQJ9UyFXMJ2SgB6ZEtLjk9Af6xNdwuC36LkWnTqp2Wnqt2i8g4aEkECR6tTl/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://web.whatsapp.com/send?phone=6285719288607&text=Halo Kak Saya Ingin beli Apartemen di menteng deket rumah gebetan saya " target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+<footer>
+    <div class="container">
+        <div class="footer-maps">
+            <h3>Lokasi Kami</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.309071077759!2d106.8447833147698!3d-6.216666695499999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f372138a0a99%3A0xf6d77e4b2d13b4e!2sGelora%20Bung%20Karno%20Main%20Stadium!5e0!3m2!1sen!2sid!4v1678901234567!5m2!1sen!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        <p>&copy; 2025 Arcadia PlayStation. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script> </body>
+</html>

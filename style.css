@@ -1,0 +1,566 @@
+:root {
+    --primary-color: #007bff; /* Biru terang */
+    --secondary-color: #28a745; /* Hijau untuk sukses/aksi */
+    --dark-bg: #1a1a1a; /* Background gelap utama */
+    --dark-card-bg: #2b2b2b; /* Background kartu produk */
+    --text-color: #e0e0e0; /* Warna teks terang */
+    --light-gray: #d0d0d0; /* Untuk garis atau border */
+    --accent-red: #dc3545; /* Merah untuk peringatan/hapus */
+
+    /* Warna baru untuk frame */
+    --frame-border-color: #444; /* Warna border yang sedikit terang */
+    --frame-shadow-color: rgba(0, 255, 255, 0.2); /* Bayangan biru kehijauan */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+
+    background-image: url('p'); /* PASTIKAN PATH INI SESUAI */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    background-color: #1a1a1a; /* Warna fallback */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #0d0d0d;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header nav ul li a.active {
+    color: #007bff; /* Warna teks biru terang, seperti contoh "Community" di gambar ikon.png */
+    border-bottom: 2px solid #007bff; /* Garis bawah biru */
+    padding-bottom: 3px; /* Jarak kecil antara teks dan garis */
+    font-weight: bold; /* Opsional: membuat teks lebih tebal */
+    transition: all 0.3s ease; /* Transisi halus untuk perubahan gaya */
+}
+    header nav ul li a.active {
+        border-bottom: none; /* Mungkin tidak perlu garis bawah di mobile jika ruang terbatas */
+        /* Anda bisa gunakan background-color atau border-left/right di sini jika diinginkan */
+        background-color: rgba(0, 123, 255, 0.2); /* Contoh: latar belakang transparan biru */
+        border-radius: 5px;
+    }
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling untuk Logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 150px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    display: none; /* Sembunyikan elemen h1.logo karena kita sudah pakai img */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.cart-icon-nav .fa-shopping-cart {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.cart-icon-nav #cart-count {
+    background-color: var(--accent-red);
+    color: white;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: super;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: white;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--frame-border-color);
+    box-shadow: 0 0 20px var(--frame-shadow-color), 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.hero-section:hover {
+    box-shadow: 0 0 30px var(--primary-color), 0 8px 25px rgba(0, 0, 0, 0.6);
+    transform: translateY(-3px);
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: var(--dark-card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--light-gray);
+}
+
+.secondary-btn:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+}
+
+/* Product Sections - Diterapkan ke konsol, game, vr & aksesoris */
+.product-section {
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--frame-border-color);
+    box-shadow: 0 0 15px var(--frame-shadow-color), 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--dark-card-bg);
+    transition: all 0.3s ease;
+}
+
+.product-section:hover {
+    box-shadow: 0 0 25px var(--secondary-color), 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.product-section.bg-light {
+    background-color: #222;
+}
+
+.product-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.product-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: var(--dark-bg);
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 10px var(--primary-color);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+}
+
+.product-item h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    font-size: 0.95rem;
+    color: var(--light-gray);
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.product-item button {
+    width: 100%;
+}
+
+/* Cart Section */
+.cart-section {
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--frame-border-color);
+    box-shadow: 0 0 15px var(--frame-shadow-color), 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--dark-card-bg);
+    transition: all 0.3s ease;
+}
+.cart-section:hover {
+    box-shadow: 0 0 25px var(--primary-color), 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-bg);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+    border: 1px solid #444;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h4 {
+    margin: 0 0 5px;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--light-gray);
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-actions input {
+    width: 50px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.cart-item-actions .remove-btn {
+    background-color: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.cart-item-actions .remove-btn:hover {
+    background-color: #c82333;
+}
+
+#empty-cart-message {
+    text-align: center;
+    font-style: italic;
+    color: var(--light-gray);
+    padding: 20px 0;
+}
+
+.cart-summary {
+    text-align: right;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.cart-summary h3 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.cart-summary button {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+}
+
+/* Checkout Section - Diberi frame juga */
+.checkout-section {
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--frame-border-color);
+    box-shadow: 0 0 15px var(--frame-shadow-color), 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--dark-card-bg);
+    transition: all 0.3s ease;
+}
+.checkout-section:hover {
+    box-shadow: 0 0 25px var(--primary-color), 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+
+#checkout-form .form-group {
+    margin-bottom: 20px;
+}
+
+#checkout-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#checkout-form input[type="text"],
+#checkout-form input[type="email"],
+#checkout-form input[type="tel"],
+#checkout-form input[type="date"],
+#checkout-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+#checkout-form input:focus,
+#checkout-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+#checkout-form button {
+    margin-right: 15px;
+}
+
+#checkout-confirmation {
+    text-align: center;
+    background-color: var(--dark-bg);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#checkout-confirmation h3 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#checkout-confirmation p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid var(--frame-border-color);
+    box-shadow: 0 0 15px var(--frame-shadow-color), 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--dark-card-bg);
+    transition: all 0.3s ease;
+}
+.contact-section:hover {
+    box-shadow: 0 0 25px var(--primary-color), 0 5px 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+
+.footer-maps {
+    margin-top: 20px; /* Jarak dari konten footer lainnya */
+    margin-bottom: 20px; /* Jarak ke teks copyright */
+    text-align: center;
+}
+
+.footer-maps h3 {
+    color: #fff; /* Warna teks judul peta */
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.footer-maps iframe {
+    border-radius: 8px; /* Sudut membulat untuk iframe peta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sedikit bayangan untuk peta */
+    max-width: 100%; /* Memastikan peta responsif */
+    height: 250px; /* Tinggi default peta */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px 10px;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .cart-item-actions {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    #checkout-form button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
