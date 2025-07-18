@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'ps5-disk',
             type: 'console',
             name: 'PlayStation 5 Disk Edition',
-            image: 'https://images.tokopedia.net/img/cache/700/VqbcmM/2023/2/27/9014a585-c8f1-4b46-bebe-4a2e69b92902.jpg',
+            image: "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/2/27/9014a585-c8f1-4b46-bebe-4a2e69b92902.jpg",
             price: 150000,
             description: 'Konsol PS5 standar dengan drive disk, nikmati game fisik & digital.'
         },
